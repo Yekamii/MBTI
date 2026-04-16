@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/MBTI/static/css/main.fa84fce4.css",
+    "main.js": "/MBTI/static/js/main.c7d41235.js",
+    "static/js/453.20359781.chunk.js": "/MBTI/static/js/453.20359781.chunk.js",
+    "index.html": "/MBTI/index.html",
+    "main.fa84fce4.css.map": "/MBTI/static/css/main.fa84fce4.css.map",
+    "main.c7d41235.js.map": "/MBTI/static/js/main.c7d41235.js.map",
+    "453.20359781.chunk.js.map": "/MBTI/static/js/453.20359781.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fa84fce4.css",
+    "static/js/main.c7d41235.js"
+  ]
+}
