@@ -1,0 +1,99 @@
+.article-page {
+  background: #121212;
+  color: #f5f5f5;
+  padding: 80px 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.article-container {
+  max-width: 760px;
+  width: 100%;
+  line-height: 1.8;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.article-title {
+  font-size: 42px;
+  text-align: center;
+  margin-bottom: 30px;
+  margin-top: -50px;
+}
+
+.article-hero {
+  width: 60%;
+  max-height: 300px;
+  object-fit: cover;
+  border-radius: 16px;
+  margin: -18px auto 8px;
+  display: block;
+}
+
+.lead {
+  font-size: 16px;
+  opacity: 0.95;
+  margin-bottom: 32px;
+}
+
+.article-container h2 {
+  margin-top: 20px;
+  margin-bottom: 16px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.article-container p {
+  margin-bottom: 16px;
+  opacity: 0.9;
+  text-align: justify;
+}
+
+.article-container ul {
+  margin: 20px 0 30px 20px;
+}
+
+.article-container li {
+  margin-bottom: 10px;
+}
+
+.sources {
+  opacity: 0.75;
+  font-size: 14px;
+}
+
+
+.save-icon-article {
+  position: absolute;
+  top: 80px;
+  right: 20px;
+  width: 24px;
+  cursor: pointer;
+}
+
+/* mob*/
+@media (max-width: 768px) {
+
+  .article-page {
+    padding: 50px 16px;
+  }
+
+  .article-title {
+    font-size: 30px;
+  }
+
+  .article-hero {
+    max-height: 260px;
+  }
+
+  .lead {
+    font-size: 16px;
+  }
+
+  .article-container h3 {
+    font-size: 20px;
+    text-align: center;
+  }
+  .article-container p{
+    text-align: center;
+  }
+}

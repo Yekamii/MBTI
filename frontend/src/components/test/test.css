@@ -1,0 +1,192 @@
+/* ================= ვრაპერი================= */
+.test-page {
+  min-height: calc(100vh - 136px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    180deg,
+    #1a1a1a 0%,
+    #222222 50%,
+    #1a1a1a 100%
+  );
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* =================ქარდი ================= */
+.test-card {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 18px;
+  padding: 50px 40px;
+  max-width: 520px;
+  width: 100%;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0, 0, 0, 0.6);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-top: -10px;
+   word-break: keep-all;
+  position: relative; 
+}
+
+
+/* ================= თანაური აღწერ================= */
+.test-title {
+  font-size: 36px;
+  color: #ffffff;
+  margin-bottom: 24px;
+  margin-top: -10px;
+  font-weight: 700;
+}
+
+.test-description {
+  font-size: 17px;
+  line-height: 1.6;
+  color: #cfd8dc;
+  margin-bottom: 20px;
+ 
+}
+.test-{
+    color: #cfd8dc;
+}
+/* =================კითხვა ================= */
+.question-text {
+  font-size: 18px;
+  color: #ffffff;
+  margin-bottom: 25px;
+}
+
+.question-counter {
+  font-size: 14px;
+  color: #fffc66e5;
+  margin-bottom: -2px;
+  margin-top: -30px;
+}
+
+/* ================= ღილაჯები ================= */
+.test-button {
+  padding: 14px 36px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  background: #ffffff;
+  border-radius: 40px;
+  border: none; 
+  cursor: pointer;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  margin-top: 20px;
+}
+
+
+.test-button:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 16px rgba(255, 255, 255, 0.9);
+}
+
+/* =================ბასუხის ღილ================= */
+.answer-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 30px;
+  margin-bottom: -16px;
+}
+
+.answer-buttons button {
+  padding: 10px 16px;
+  font-size: 16px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  border: 1px solid #eceaea;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.answer-buttons button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-1px);
+}
+
+/* ================= შედეგი (სურ)================= */
+.result-image {
+  max-width: 150px;
+  margin-bottom: -10px;
+  border-radius: 12px;
+  margin-top: -26px;
+}
+
+/* =================პროგრეს ბარი ================= */
+.progress-bar {
+  height: 8px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.progress-bar-fill {
+  height: 100%;
+  width: 0%;
+  background: #ffffff;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+
+.save-icon-result {
+  width: 26px;
+  cursor: pointer;
+  margin-top: 15px;
+}
+
+.save-icon-result {
+  width: 30px;
+  cursor: pointer;
+  position: absolute;   
+  top: 20px;           
+  right: 30px;         
+}
+
+/* ===== რეგისტრაციის ტექსტი ===== */
+.register-text {
+  color: #ffffff;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+.register-link {
+  color: #faf600;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.register-link:hover {
+  text-decoration: underline;
+}
+
+
+
+/* ===========მობ ================= */
+@media (max-width: 480px) {
+  .test-title {
+    font-size: 28px;
+  }
+
+  .test-card {
+    padding: 36px 24px;
+  }
+  .question-counter{
+    margin-top: -20px;
+  }
+  .question-text {
+    font-size: 18px;
+  }
+
+  .test-button {
+    font-size: 16px;
+    padding: 12px 28px;
+  }
+}

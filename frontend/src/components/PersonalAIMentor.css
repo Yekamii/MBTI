@@ -1,0 +1,181 @@
+/* ================= AI MENTOR ================= */
+
+.ai-mentor{
+  position: absolute;
+  bottom: 20px;
+  top: 170px;
+  left: 28px;
+  width: 280px;
+  height: 360px;
+  background: rgba(0, 0, 0, 0.578);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 0 30px rgba(0,0,0,.8);
+  display:flex;
+  flex-direction:column;
+  overflow:hidden;
+  z-index:999;
+  transition: box-shadow 0.4s ease, transform 0.3s ease;
+}
+
+.ai-mentor:hover{
+  box-shadow: 0 0 35px rgba(255,213,79,.25);
+}
+
+/* HEADER */
+.ai-header{
+  padding:12px;
+  text-align:center;
+  color:#ffd54f;
+  font-weight:600;
+  border-bottom:1px solid rgba(255,255,255,.1);
+  letter-spacing:.5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* MESSAGES */
+/* ================= AI MENTOR SCROLL ================= */
+.ai-messages {
+  flex: 1;
+  padding: 10px;
+  overflow-y: auto;
+  font-size: 13px;
+  scroll-behavior: smooth; /* smooth scrolling */
+  display: flex;
+  flex-direction: column;
+
+  /* custom scrollbar */
+  scrollbar-width: thin; /* Firefox */
+  scrollbar-color: rgba(255,213,79,0.5) transparent; /* Firefox */
+}
+
+.ai-messages::-webkit-scrollbar {
+  width: 10px;
+}
+
+.ai-messages::-webkit-scrollbar-thumb {
+  background: rgba(255,213,79,0.5);
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.ai-messages::-webkit-scrollbar-thumb:hover {
+  background: rgba(255,213,79,0.8);
+}
+
+/* MESSAGE */
+.msg{
+  margin-bottom:10px;
+  padding:9px 10px;
+  border-radius:10px;
+  animation: fadeIn .3s ease;
+  max-width:85%;
+  word-break: break-word;
+  animation: fadeIn .25s ease;
+}
+
+/* AI LEFT */
+.msg.ai{
+  background:#2a2a2a;
+  color:#fff;
+  align-self:flex-start;
+  margin-right:auto;
+  text-align:left;
+}
+
+/* USER RIGHT */
+.msg.user{
+  background: linear-gradient(135deg,#ffd54f,#ffe082);
+  color:#000;
+  font-weight:500;
+  box-shadow: 0 2px 10px rgba(255,213,79,.3);
+  align-self:flex-end;
+  margin-left:auto;
+  text-align:right;
+}
+
+/* INPUT AREA */
+.ai-input{
+  display:flex;
+  border-top:1px solid rgba(255,255,255,.1);
+  background: rgba(255,255,255,.03);
+  align-items:flex-end;
+  padding:6px;
+  gap:6px;
+}
+
+/* TEXTAREA */
+.ai-input textarea{
+  flex:1;
+  background:none;
+  border:none;
+  color:#fff;
+  padding:8px;
+  resize:none;
+  outline:none;
+  font-family:inherit;
+  font-size:14px;
+  max-height:100px;
+  line-height:1.4;
+  overflow-y:auto;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.ai-input textarea:hover{
+  background: rgba(255,255,255,.05);
+  border-radius:8px;
+}
+
+.ai-input textarea:focus{
+  background: rgba(255,255,255,.08);
+  box-shadow: inset 0 0 6px rgba(255,213,79,.3);
+  border-radius:8px;
+}
+
+.ai-input textarea::-webkit-scrollbar{
+  width:4px;
+}
+
+.ai-input textarea::-webkit-scrollbar-thumb{
+  background: rgba(255,255,255,.3);
+  border-radius:6px;
+}
+
+/* SEND BUTTON */
+.ai-input button{
+  background:none;
+  border:1px solid #ffd54f;
+  color:#ffd54f;
+  padding:8px 10px;
+  cursor:pointer;
+  font-weight:600;
+  font-size:13px;
+  border-radius: 10px;
+}
+
+/* Simple hover without glow */
+.ai-input button:hover{
+   background:#ffd54f;
+  color:#000;
+}
+
+
+/* Animation */
+
+
+.new-chat-btn{
+  background:none;
+  border:1px solid #ffd54f;
+  color:#ffd54f;
+  padding:2px 6px;
+  border-radius:6px;
+  cursor:pointer;
+  font-size:11px;
+}
+
+.new-chat-btn:hover{
+  background:#ffd54f;
+  color:#000;
+}

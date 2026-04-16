@@ -1,0 +1,84 @@
+/* header sticker */
+.research-ticker-wrapper {
+  position: sticky;
+  top: 68px; 
+  width: 100%;
+  background: linear-gradient(90deg, #1a1a1a, #222222);
+  padding: 4px 0;
+  z-index: 999;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+}
+
+/*  ticker */
+.research-ticker {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  font-family: "Segoe UI", sans-serif;
+  font-size: 14px;
+  color: #f5f5f5;
+  height: 40px;
+}
+.research-ticker span:first-child {
+  font-weight: 600;
+  margin-left: -18px;
+  flex-shrink: 0;
+  padding: 4px 10px;
+  border-radius: 4px;
+  background: linear-gradient(90deg, #1a1a1abe, #222222bd);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.3);
+  color: #fff;
+  z-index: 10; 
+  position: relative;
+}
+
+
+/* scroll animation */
+.ticker-scroll {
+  display: flex;
+  gap: 40px;
+  white-space: nowrap;
+  animation: tickerMove 40s linear infinite; /* ნელი მოძრაობა */
+}
+
+/* hover-ზედ გაჩერება */
+.ticker-scroll a:hover {
+  color: #ffd700;
+}
+.research-ticker:hover .ticker-scroll{
+    animation-play-state: paused;
+}
+
+/* marquee movement */
+@keyframes tickerMove {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* links style */
+.ticker-scroll a {
+  color: #f5f5f5;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+/* mobi */
+@media (max-width: 768px) {
+  .research-ticker {
+    font-size: 13px;
+    height: 36px;
+    padding: 0 12px;
+  }
+
+  .ticker-scroll {
+    gap: 24px;
+    animation-duration: 50s;
+  }
+}
