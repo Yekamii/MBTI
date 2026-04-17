@@ -7,7 +7,11 @@ export default function HeroSection() {
     <section id="hero" className="hero">
       <div className="hero-content">
         <div className="hero-logo">
-          <img src="/mb.png" alt="MBTI Logo" />
+          <img 
+            src="/mb.png" 
+            alt="MBTI Logo"
+            onError={(e)=>{e.target.style.display="none"}}
+          />
         </div>
 
         <h1 className="hero-title">გაიცანი საკუთარი პიროვნება</h1>

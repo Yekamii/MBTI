@@ -1,10 +1,10 @@
-import React, { useState,  useRef, useContext } from "react";
+import React, { useState, useRef, useContext } from "react";
 import { NavLink, useNavigate } from "react-router-dom";
 import "./Header.css";
-import { AuthContext } from "../context/AuthContext"; // <- import
+import { AuthContext } from "../context/AuthContext";
 
 export default function Header() {
-  const { user, logout } = useContext(AuthContext); // <- აქ
+  const { user, logout } = useContext(AuthContext);
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState("");
@@ -25,7 +25,7 @@ export default function Header() {
   };
 
   const handleSignOut = () => {
-    logout(); // <- Context logout
+    logout();
     setUserMenuOpen(false);
     navigate("/register");
   };
@@ -35,8 +35,6 @@ export default function Header() {
     setSearchOpen(false);
     setMenuOpen(false);
   };
-
-  // click outside etc, menu toggle, remains unchanged
 
   return (
     <header className="header">
@@ -49,16 +47,24 @@ export default function Header() {
       <nav className={`nav ${menuOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <NavLink to="/" end onClick={() => setMenuOpen(false)}>მთავარი</NavLink>
+            <NavLink to="/" end onClick={() => setMenuOpen(false)}>
+              მთავარი
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/mbti-dimensions" onClick={() => setMenuOpen(false)}>MBTI განზომილებები</NavLink>
+            <NavLink to="/mbti-dimensions" onClick={() => setMenuOpen(false)}>
+              MBTI განზომილებები
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/articles" onClick={() => setMenuOpen(false)}>მიმოხილვები</NavLink>
+            <NavLink to="/articles" onClick={() => setMenuOpen(false)}>
+              მიმოხილვები
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/start-test" onClick={() => setMenuOpen(false)}>დაწყება ტესტი</NavLink>
+            <NavLink to="/start-test" onClick={() => setMenuOpen(false)}>
+              დაწყება ტესტი
+            </NavLink>
           </li>
         </ul>
       </nav>
@@ -71,7 +77,11 @@ export default function Header() {
             setMenuOpen(false);
           }}
         >
-          <img src="/search.png" alt="ძებნა" className="search-icon" />
+          <img
+            src="/search.png"
+            alt="ძებნა"
+            className="search-icon"
+          />
         </button>
 
         {searchOpen && (
@@ -88,23 +98,37 @@ export default function Header() {
         )}
 
         {!user ? (
-          <NavLink to="/register" className="mobile-signin">Sign In</NavLink>
+          <NavLink to="/register" className="mobile-signin">
+            Sign In
+          </NavLink>
         ) : (
-          <div ref={userRef} className="header-user-wrapper" onClick={handleUserIconClick}>
+          <div
+            ref={userRef}
+            className="header-user-wrapper"
+            onClick={handleUserIconClick}
+          >
             <div className="header-user">
               <img
-                src={user.photo || "/images/default.png"}
+                src={user.photo || "/default.png"}
                 alt={user.name}
                 className="header-user-photo"
-                onError={(e) => { e.target.src = "/images/default.png"; }}
+                onError={(e) => {
+                  e.target.src = "/default.png";
+                }}
               />
             </div>
 
             {userMenuOpen && (
               <div className="user-dropdown">
-                <span className="dropdown-user-email">{user.email}</span>
-                <button onClick={() => navigate("/profile")}>Profile</button>
-                <button onClick={handleSignOut}>Sign Out</button>
+                <span className="dropdown-user-email">
+                  {user.email}
+                </span>
+                <button onClick={() => navigate("/profile")}>
+                  Profile
+                </button>
+                <button onClick={handleSignOut}>
+                  Sign Out
+                </button>
               </div>
             )}
           </div>

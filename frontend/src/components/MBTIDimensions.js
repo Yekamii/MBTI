@@ -12,22 +12,26 @@ export default function MBTIDimensions() {
       {/* ზოგადი ახსნა */}
       <section className={`intro ${expanded === "intro" ? "expanded" : ""}`}>
         <h1>MBTI განზომილებები</h1>
+
         <p>
-          MBTI (Myers&#8210;Briggs Type Indicator) წარმოადგენს პიროვნების ტიპოლოგიას და ეფუძნება კარლ იუნგის ფსიქოლოგიურ თეორიებს&#46; იუნგი აღწერდა&#44; რომ ადამიანებს განსხვავებული ფსიქოლოგიური ფუნდამენტი აქვთ იმის შესახებ თუ როგორ აღიქვამენ ინფორმაციას&#44; იღებენ გადაწყვეტილებებს და რეაგირებენ სამყაროზე&#46; MBTI შექმნაზე მუშაობდნენ კეტრინ ბრიგზი და მისი ქალიშვილი  1940&#8210;50&#8210;იან წლებში&#44; ისინი მიზნად ისახავდნენ ადამიანთა გსიქოტიპების შესწავლას&#46; თავდაპირველად იგი გამოიყენებოდა პროფესიული ორიენტაციისთვის&#44; მაგრამ დროთა განმავლობაში ფართოდ გავრცელდა თვითშემეცნებისა და პიროვნული განვითარების სფეროში&#46;
+          MBTI (Myers&#8210;Briggs Type Indicator) წარმოადგენს პიროვნების ტიპოლოგიას და ეფუძნება კარლ იუნგის ფსიქოლოგიურ თეორიებს&#46; იუნგი აღწერდა&#44; რომ ადამიანებს განსხვავებული ფსიქოლოგიური ფუნდამენტი აქვთ იმის შესახებ თუ როგორ აღიქვამენ ინფორმაციას&#44; იღებენ გადაწყვეტილებებს და რეაგირებენ სამყაროზე&#46; MBTI შექმნაზე მუშაობდნენ კეტრინ ბრიგზი და მისი ქალიშვილი 1940&#8210;50&#8210;იან წლებში&#44; ისინი მიზნად ისახავდნენ ადამიანთა გსიქოტიპების შესწავლას&#46;
         </p>
+
         <p>
-          MBTI ქმნის პრაქტიკულ სისტემას იუნგის იდეების მიხედვით&#44;  იგი ხასიათხდება 4 განზომილებით </p>
-          <p><strong>1&#46;(Extraversion&#8210;E&frasl;Introversion&#8210;I)</strong> განსაზღვრავს, თუ როგორ აღიდგენს ადამიანი ენერგიას,ანუ ენერგიის წყარო შინაგანი სამყაროდან მოდის <strong>(I)</strong> თუ&#44; გარეგანი ფაქტორებით&#44; ადამინებთან ურთიერთიბით&#44;<strong>(E)</strong>&#46;
-          </p>
-          <p><strong>2&#46;(Sensing&#8210;S&frasl;Intuition&#8210;N)</strong> განსაზღვრავს ინფორმაციის აღქმას&#44; ანუ ადამიანი მის ირგვლივ არსებულ დეტალებზეა ორიენტირებული, აანალიზებს პრაქტიკულ მონაცემებს და ძირითადად სამყაროს აღიქვამს იმით რასაც ეხება&#44; გრძნობს&#44; ხედავს&#44; ისმენს <strong>(S)</strong>&#44; თუ ძირითადად ეყრძნობა ინტუიციას, ცდილობს დაინახოს დიდი სურათi და არა მხოლოდ ის რაც მის ირგვლივაა <strong>(N)</strong> &#46;</p> 
-          <p><strong>3&#46;(Thinking&#8210;T&frasl;Feeling&#8210;F)</strong> აღწერს გადაწყვეტილების მიღებისას გათვალისწინებული ფაქტორებს&#44;  კერძოდ&#44;  ადამიანი ეყრდნობა პიროვნულ დამოკიდებულებებს&#44;  შეგრძნებებს&#44; ღირებულებებს <strong>(F)</strong>&#44; თუ ძირითადად ეფუძნება ანალიზს&#44; ობიექტურობას&#44; წესებს <strong>(T)</strong> &#46;</p> 
-          <p><strong>4&#46;(Judging&#8210;J&frasl;Perceiving&#8210;P)</strong> განსაზღვრავს თუ როგორ მართავს ადამიანი ყოველდღიურ ცხოვრებას&#44; გეგმის მიხედვით&#44; აქვს წინასწარგანსაზღვრული ნაბიჯები <strong>(J)</strong> &#44;თუ სპონტანურად&#44; წინასწარი გათვლის გარეშე&#46; მარტივად ადაპტირდება ცვლილებებთან (P) &#46;</p> 
-          <p>ეს ოთხი განზომილება იძლევა 16 უნიკალურ ფსიქოტიპს&#44; რომლებიც ეხმარება ინდივიდს თვითშემეცნობასა და ადამიანთა ურთიერთქმედებაში&#46;</p>
-        
+          MBTI ქმნის პრაქტიკულ სისტემას იუნგის იდეების მიხედვით&#44; იგი ხასიათხდება 4 განზომილებით
+        </p>
+
+        <p><strong>1&#46;(Extraversion&#8210;E&frasl;Introversion&#8210;I)</strong> ...</p>
+        <p><strong>2&#46;(Sensing&#8210;S&frasl;Intuition&#8210;N)</strong> ...</p>
+        <p><strong>3&#46;(Thinking&#8210;T&frasl;Feeling&#8210;F)</strong> ...</p>
+        <p><strong>4&#46;(Judging&#8210;J&frasl;Perceiving&#8210;P)</strong> ...</p>
+
         <button
-          className="read-more" onClick={() =>
-          setExpanded(expanded === "intro" ? null : "intro")
-          }>
+          className="read-more"
+          onClick={() =>
+            setExpanded(expanded === "intro" ? null : "intro")
+          }
+        >
           {expanded === "intro" ? "დაკეცვა" : "განაგრძე კითხვა"}
         </button>
       </section>
@@ -35,17 +39,15 @@ export default function MBTIDimensions() {
       {/* T vs A */}
       <section className={`assertive ${expanded === "assertive" ? "expanded" : ""}`}>
         <h2>Turbulent (T) და Assertive (A)</h2>
-        <p>ეს განზომილება ცალკე დამატებაა და არ შედის კლასიკურ 16 MBTI ტიპში&#46; იგი აღწერს&#44; როგორ რეაგირებს ადამიანი სტრესზე&#44; შეცდომებსა და გამოწვევებზე&#46;</p>
-        <p>
-          Turbulent (T) ტიპები უფრო მგრძნობიარენი არიან სტრესის მიმართ&#44; ხშირად აკვირდებიან საკუთარ ქმედებებს და მუდმივად ცდილობენ თვითგანვითარებასა და გაუმჯობესებას&#46; მათთვის მნიშვნელოვანია უკუკავშირი და ხშირად მაღალ სტანდარტებს უწესებენ საკუთარ თავს&#46;
-        </p>
-        <p>
-          Assertive (A) ტიპები კი უფრო თავდაჯერებულები არიან&#44; უკეთ ინარჩუნებენ ემოციურ სტაბილურობას და მშვიდად რეაგირებენ სირთულეებსა და გამოწვევებზე&#46; ისინი საკუთარ გადაწყვეტილებებში მეტად დარწმუნებულები არიან და ნაკლებად განიცდიან გარე ზეწოლას&#46;
-        </p>
+
+        <p>ეს განზომილება ცალკე დამატებაა...</p>
+
         <button
-          className="read-more" onClick={() =>
-          setExpanded(expanded === "assertive" ? null : "assertive")
-          }>
+          className="read-more"
+          onClick={() =>
+            setExpanded(expanded === "assertive" ? null : "assertive")
+          }
+        >
           {expanded === "assertive" ? "დაკეცვა" : "განაგრძე კითხვა"}
         </button>
       </section>
@@ -53,11 +55,16 @@ export default function MBTIDimensions() {
       {/* სტატიების ქარდი */}
       <section className="articles-preview">
         <h2>გაიგე მეტი</h2>
+
         <div className="articles-grid">
 
           <article className="article-card">
             <NavLink to="/ei" className="card-link">
-              <img src="/ei.png" alt="E vs I" />
+              <img
+                src="/ei.png"
+                alt="E vs I"
+                onError={(e) => (e.target.style.display = "none")}
+              />
               <h3>E vs I</h3>
               <p>როგორ განსხვავდება ექსტროვერსია და ინტროვერსია</p>
             </NavLink>
@@ -65,30 +72,41 @@ export default function MBTIDimensions() {
 
           <article className="article-card">
             <NavLink to="/sn" className="card-link">
-              <img src="/sn.png" alt="S vs N" />
+              <img
+                src="/sn.png"
+                alt="S vs N"
+                onError={(e) => (e.target.style.display = "none")}
+              />
               <h3>S vs N</h3>
-              <p>ფაქტები თუ ინტუიცია &#8210; როგორ ვამუშავებთ ინფორმაციას</p>
+              <p>ფაქტები თუ ინტუიცია</p>
             </NavLink>
           </article>
 
           <article className="article-card">
             <NavLink to="/tf" className="card-link">
-              <img src="/tf.png" alt="T vs F" />
+              <img
+                src="/tf.png"
+                alt="T vs F"
+                onError={(e) => (e.target.style.display = "none")}
+              />
               <h3>T vs F</h3>
-              <p>ლოგიკა და ემოციები &#8210; გადაწყვეტილების მიღების გზები</p>
+              <p>ლოგიკა და ემოციები</p>
             </NavLink>
           </article>
 
           <article className="article-card">
             <NavLink to="/jp" className="card-link">
-              <img src="/jp.png" alt="J vs P" />
+              <img
+                src="/jp.png"
+                alt="J vs P"
+                onError={(e) => (e.target.style.display = "none")}
+              />
               <h3>J vs P</h3>
-              <p>სტრუქტურა თუ სპონტანურობა ყოველდღიურ ცხოვრებაში</p>
+              <p>სტრუქტურა თუ სპონტანურობა</p>
             </NavLink>
           </article>
 
         </div>
-
       </section>
 
     </main>

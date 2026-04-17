@@ -5,17 +5,21 @@ export default function Footer() {
   return (
     <footer className="footer">
       <div className="footer-container">
-        {/* კონტაქტის სვეტი */}
+        {/* კონტაქტი */}
         <div className="footer-column">
           <span className="footer-title">კონტაქტი</span>
           <div className="footer-icons">
             <a href="mailto:yekami.yekami@gmail.com" aria-label="Email">
-              <img src="/gmail.png" alt="Gmail" />
+              <img 
+                src="/gmail.png" 
+                alt="Gmail"
+                onError={(e)=>{e.target.style.display="none"}}
+              />
             </a>
           </div>
         </div>
 
-        {/* სვეტი */}
+        {/* გაზიარება */}
         <div className="footer-column">
           <span className="footer-title">გაზიარება</span>
           <div className="footer-icons">
@@ -25,7 +29,11 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="Instagram"
             >
-              <img src="/instalog.png" alt="Instagram" />
+              <img 
+                src="/instalog.png" 
+                alt="Instagram"
+                onError={(e)=>{e.target.style.display="none"}}
+              />
             </a>
 
             <a
@@ -34,15 +42,18 @@ export default function Footer() {
               rel="noopener noreferrer"
               aria-label="Facebook"
             >
-              <img src="/facebook.png" alt="Facebook" />
+              <img 
+                src="/facebook.png" 
+                alt="Facebook"
+                onError={(e)=>{e.target.style.display="none"}}
+              />
             </a>
           </div>
         </div>
       </div>
 
-      {/* თარიღი*/}
       <span className="footer-date">
-        © {new Date().getFullYear()} MBTI 
+        © {new Date().getFullYear()} MBTI
       </span>
     </footer>
   );
