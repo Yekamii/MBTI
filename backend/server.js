@@ -12,7 +12,6 @@ import authRoutes from "./routes/auth.js";
 import chatRoutes from "./routes/chat.js";
 import userRoutes from "./routes/user.js";
 
-
 import "./auth/google.js";
 
 const app = express();
@@ -20,7 +19,7 @@ const app = express();
 //  (local + production)
 const allowedOrigins = [
   "http://localhost:3000",
-  "https://mbti-frontend.onrender.com" // ← თუ frontend გაქვს Render-ზე, აქ ჩასვი
+  "https://mbti-frontend.onrender.com"
 ];
 
 app.use(
@@ -49,6 +48,11 @@ app.use("/api/articles", articlesRoutes);
 app.use("/api/pubmed", pubmedRoutes);
 app.use("/api/chat-reply", chatRoutes);
 app.use("/api/user", userRoutes);
+
+// 👇 დაამატე მხოლოდ ეს
+app.get("/", (req, res) => {
+  res.send("MBTI Backend running 🚀");
+});
 
 app.get("/health", (req, res) => {
   res.json({ status: "ok" });
