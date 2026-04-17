@@ -16,34 +16,53 @@ import "./auth/google.js";
 
 const app = express();
 
+//  (local + production)
+const allowedOrigins = [
+  "http://localhost:3000",
+  "https://mbti-frontend.onrender.com" // ← თუ frontend გაქვს Render-ზე, აქ ჩასვი
+];
+
 app.use(
   cors({
-    origin: "http://localhost:3000",
+    origin: function (origin, callback) {
+      if (!origin) return callback(null, true);
+      if (allowedOrigins.includes(origin)) {
+        return callback(null, true);
+      }
+      return callback(new Error("Not allowed by CORS"));
+    },
     credentials: true,
   })
 );
 
 app.use(express.json());
+
+// static files
 app.use("/images", express.static("public/images"));
 
 app.use(passport.initialize());
 
+// routes
 app.use("/auth", authRoutes);
 app.use("/api/articles", articlesRoutes);
 app.use("/api/pubmed", pubmedRoutes);
 app.use("/api/chat-reply", chatRoutes);
 app.use("/api/user", userRoutes);
 
+// 404 handler
 app.use((req, res) => {
   res.status(404).json({ error: "Route not found" });
 });
 
+// error handler
 app.use((err, req, res, next) => {
-  console.error("🔥 Server error:", err);
+  console.error("Server error:", err);
   res.status(500).json({ error: "Internal Server Error" });
 });
 
+//PORT (RENDER SAFE)
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () =>
-  console.log(`🚀 Server running on http://localhost:${PORT}`)
+
+app.listen(PORT, "0.0.0.0", () =>
+  console.log(` Server running on port ${PORT}`)
 );
