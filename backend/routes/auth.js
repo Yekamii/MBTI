@@ -1,30 +1,33 @@
-// routes\auth.js
+// routes/auth.js
 import express from "express";
 import jwt from "jsonwebtoken";
 import passport from "../auth/google.js";
 
 const router = express.Router();
 
+// FRONTEND URL (Render-safe)
+const FRONTEND_URL =
+  process.env.FRONTEND_URL || "http://localhost:3000";
+
 router.get(
   "/google",
   passport.authenticate("google", {
-  scope: ["profile", "email"],
-  prompt: "select_account"
-})
+    scope: ["profile", "email"],
+    prompt: "select_account",
+  })
 );
 
 router.get(
   "/google/callback",
   passport.authenticate("google", {
     session: false,
-    failureRedirect: "http://localhost:3000/register",
+    failureRedirect: `${FRONTEND_URL}/register`,
   }),
   (req, res) => {
     if (!req.user) {
-      return res.redirect("http://localhost:3000/register");
+      return res.redirect(`${FRONTEND_URL}/register`);
     }
 
-    // 🔥 FIX: normalize Postgres row
     const payload = {
       id: req.user.id,
       google_id: req.user.google_id,
@@ -39,7 +42,7 @@ router.get(
     });
 
     return res.redirect(
-      `http://localhost:3000/register?token=${token}`
+      `${FRONTEND_URL}/register?token=${token}`
     );
   }
 );
